@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+    .dot {
+      height: 30px;
+      width: 30px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+    }
+    .topnav {
+      background-color: #333;
+      overflow: hidden;
+    }
+
+    /* Style the links inside the navigation bar */
+    .topnav a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    /* Change the color of links on hover */
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    /* Add an active class to highlight the current page */
+    .topnav a.active {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    /* Hide the link that should open and close the topnav on small screens */
+    .topnav .icon {
+      display: none;
+    }
+
+    .footer{
+        text-align: center;
+        background-color: #333;
+        color:white;
+    }
+
+    .container{
+        margin-top:10px;
+    }
+
+    .jumbotron {
+        padding: 2rem 2rem;
+    }
+
+    .rounded{
+      margin-left: 10px;
+      margin-top: 5px;
+    }
+
+    .text-muted{
+      display: block;
+      
+    }
+
+    .app-name{
+      margin-left: 10px;      
+      color: royalblue;
+    }
+
+</style>
+ 
+<head>
+    <title>Hermes: el mensajero</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-          Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ 
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+ 
+ 
+</head>
+ 
+<body>
+ 
+    <div class="container">            
+
+        <div class="header">
+            
+        <div class="topnav" id="myTopnav">
+                <ul class="nav nav-pills pull-right">
+                    <li role="presentation" class="active"><a href="#">Home</a>
+                    </li>
+                    <li role="presentation"><a href="#">Acceso</a>
+                    </li>
+
+                </ul>
+            </nav>
+            <h3 class="text-muted"><img src="{{url_for('static', filename='hermes.png')}}" class="rounded" alt="LOGO" height="50px"><span class="app-name">Hermes</span> </h3>
+        </div>
+ 
+        <div class="jumbotron">
+            <h1>Servicio de mensajeria</h1>
+            <p class="lead"></p>
+            
+            </p>
+        </div>
+
+ 
+        <div class="row marketing">
+            <div class="col-lg-6">
+                 
+
+
+               
+            </div>
+ 
+            
+        </div>
+ 
+        <footer class="footer">
+            <p>&copy; Nano</p>
+        </footer>
+ 
+    </div>
+</body>
+ 
+</html>
