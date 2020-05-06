@@ -4,13 +4,7 @@ from . import senderSlack
 import slack
 import configparser
 import os
-#config = configparser.ConfigParser()
-#config.read('config.ini')
 
-#with open('config.json', 'r') as file:
-#    config = json.load(file)
-
-#client = slack.WebClient(token='xoxb-290501828145-824715819074-N27pIGwNg8RbyVKGa8DS95Td')
 client = slack.WebClient(token=os.environ.get('SLACK_TOKEN', None))
 
 @senderSlack.route("/slack/test")
