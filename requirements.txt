@@ -1,0 +1,12 @@
+Flask
+jsonify
+flask_sqlalchemy
+flask-restful
+flask-WTF
+pymysql
+mysqlclient
+SQLAlchemy==1.3.1
+python-slugify
+flask-jwt-extended
+Flask-Mail
+slackclient
