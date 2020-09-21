@@ -1,4 +1,5 @@
 from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
 
 def register_error_handlers(app):
     @app.errorhandler(500)
@@ -12,6 +13,9 @@ def register_error_handlers(app):
 
 def create_app():
     app = Flask(__name__)
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////stadistic.db'
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
+    db = SQLAlchemy(app)
 
     from .public import public
     app.register_blueprint(public)
@@ -27,8 +31,3 @@ def create_app():
 
     register_error_handlers(app)
     return app
-
-
-
-
-

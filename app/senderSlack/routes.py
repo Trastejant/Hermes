@@ -8,13 +8,13 @@ import os
 client = slack.WebClient(token=os.environ.get('SLACK_TOKEN', None))
 
 @senderSlack.route("/slack/test")
-def test():   
+def test():
 	return "ok",200
 
 @senderSlack.route("/slack/send", methods=['POST'])
-def enviar(): 
+def enviar():
 	content = request.get_json(force=True)
-
+	stadistic.saveRegister('slack')
 	if not "channel" in content.keys():
 		return "El canal es un párametro requerido",403
 
@@ -23,13 +23,13 @@ def enviar():
 
 	response = client.chat_postMessage(
     	channel=content['channel'],
-    	text=content['message'])	
+    	text=content['message'])
 
 	return {"Status":response["ok"]}
 
 
 @senderSlack.route("/slack/ask", methods=['POST'])
-def ask(): 
+def ask():
 	content = request.get_json(force=True)
 
 	if not "task_id" in content.keys():
@@ -80,5 +80,5 @@ def ask():
     	channel=content['channel'],
     	text=content['message'],
     	attachments=attachments)
-	
+
 	return {"Status":response["ok"]}
